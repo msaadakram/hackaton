@@ -1,0 +1,141 @@
+.discover-section {
+    background-color: #111;
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Badge */
+.discover-badge {
+    background-color: #E33A3A;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+/* Headline */
+.discover-headline {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.15;
+    font-style: italic;
+    margin: 0 0 2rem 0;
+}
+
+.discover-headline .text-white {
+    color: white;
+}
+
+.discover-headline .text-red {
+    color: #E33A3A;
+}
+
+/* Subtitle */
+.discover-subtitle {
+    font-size: 1.1rem;
+    color: #888;
+    line-height: 1.7;
+    margin: 0 0 2.5rem 0;
+}
+
+/* CTA Button */
+.discover-cta {
+    background-color: #E33A3A;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s;
+    margin-bottom: 2.5rem;
+}
+
+.discover-cta:hover {
+    background-color: #c92e2e;
+    transform: translateY(-2px);
+}
+
+.discover-cta .arrow-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+/* Social Proof */
+.discover-social-proof {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.creator-avatars {
+    display: flex;
+}
+
+.creator-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #111;
+    margin-left: -10px;
+    object-fit: cover;
+}
+
+.creator-avatar:first-child {
+    margin-left: 0;
+}
+
+.creator-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stars {
+    color: #fbbf24;
+    font-size: 0.9rem;
+}
+
+.creator-count {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Categories Showcase */
+.categories-showcase {
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 2rem;
+}
+
+.categories-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .discover-headline {
+        font-size: 2.5rem;
+    }
+
+    .discover-subtitle {
+        font-size: 1rem;
+    }
+}

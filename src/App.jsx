@@ -11,6 +11,9 @@ import CustomProductSection from './components/CustomProductSection';
 import BenefitsGrid from './components/BenefitsGrid';
 import StatsSection from './components/StatsSection';
 import ReviewsSection from './components/ReviewsSection';
+import FreeResourcesSection from './components/FreeResourcesSection';
+import DiscoverSection from './components/DiscoverSection';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -27,6 +30,9 @@ function App() {
       <BenefitsGrid />
       <StatsSection />
       <ReviewsSection />
+      <FreeResourcesSection />
+      <DiscoverSection />
+      <Footer />
     </div>
   );
 }
