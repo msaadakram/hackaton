@@ -1,0 +1,146 @@
+.benefits-grid-section {
+    background-color: #111;
+    padding: 4rem 2rem 6rem;
+    display: flex;
+    justify-content: center;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.benefit-card {
+    border-radius: 20px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+    transition: transform 0.2s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Card Types */
+.dark-card {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.light-card {
+    background-color: #e8e8e8;
+    color: #111;
+}
+
+.red-card {
+    background-color: #E33A3A;
+    color: white;
+}
+
+/* Spanning */
+.span-1 {
+    grid-column: span 1;
+}
+
+.span-2-rows {
+    grid-row: span 2;
+}
+
+/* Card Content */
+.card-content h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.card-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.benefit-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.benefit-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Card Images */
+.card-image {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.card-image.centered {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.globe-icon,
+.brain-icon {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    opacity: 0.6;
+}
+
+/* Document Image */
+.document-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Books Stack Image */
+.books-stack-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+/* Satisfaction Card */
+.satisfaction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .span-2-rows {
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-card {
+        min-height: 200px;
+    }
+}

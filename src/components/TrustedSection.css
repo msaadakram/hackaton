@@ -1,0 +1,90 @@
+.trusted-section {
+    background-color: white;
+    color: #999;
+    width: 100%;
+    /* Create the curved top effect */
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    padding: 3rem 1rem;
+    position: relative;
+    /* Ensure it sits on top if needed, or flows naturally */
+    z-index: 10;
+    margin-top: -3rem;
+    /* Pull up to overlap if desired, or just sit flush */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trusted-label {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    color: #AAA;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.trusted-logos-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    padding: 1rem 0;
+}
+
+.trusted-logos {
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    width: max-content;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: opacity 0.3s;
+    animation: trusted-marquee 15s linear infinite;
+}
+
+.trusted-logos-wrapper:hover .trusted-logos {
+    opacity: 0.8;
+    animation-play-state: paused;
+}
+
+@keyframes trusted-marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 3rem));
+    }
+}
+
+.trusted-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: default;
+    transition: transform 0.2s;
+    transform: scale(1.5);
+}
+
+.trusted-logo:hover {
+    transform: scale(1.6);
+    filter: grayscale(0%);
+    color: #555;
+}
+
+/* Specific logo tweaks to simulate the image */
+.logo-dype {
+    gap: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+}
+
+.logo-uplevel {
+    text-align: center;
+    line-height: 1;
+}

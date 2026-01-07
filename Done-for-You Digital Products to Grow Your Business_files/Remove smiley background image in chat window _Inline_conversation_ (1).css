@@ -1,0 +1,7 @@
+.online_bg, .offline_bg {
+    display: none;
+}
+
+.loadframe header:before {
+    background-image: none;
+}

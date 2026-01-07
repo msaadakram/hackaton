@@ -1,0 +1,160 @@
+.features-grid-section {
+    padding: 2rem 1rem 6rem 1rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.features-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.feature-card {
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Small Card Styles */
+.small-card {
+    background-color: #F3F4F6;
+    color: #111;
+    flex-grow: 1;
+    /* Make them fill column height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.small-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.small-card p {
+    font-size: 0.95rem;
+    color: #6B7280;
+    line-height: 1.5;
+}
+
+/* Tall Card Styles */
+.tall-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 3.5rem;
+}
+
+/* Red Card */
+.red-card {
+    background-color: #E33A3A;
+    color: white;
+}
+
+.red-card h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.red-card p {
+    font-size: 1rem;
+    opacity: 0.9;
+    line-height: 1.5;
+    z-index: 2;
+}
+
+/* Red Ribbon/Wave Decoration */
+/* Red Ribbon/Wave Decoration */
+.ribbon-wave {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 250px;
+    height: auto;
+    transform: rotate(0deg);
+    /* Reset rotation if image is already correct */
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+/* Removed pseudo-element style */
+
+
+/* Black Card */
+.black-card {
+    background-color: #111;
+    color: white;
+    justify-content: space-between;
+    /* Space out content for black card */
+    padding-bottom: 3.5rem;
+}
+
+.black-card h3:first-child {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.black-card .book-decoration {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222;
+    /* Dark gray book */
+    margin: 2rem 0;
+}
+
+.book-icon {
+    width: 120px;
+    height: 120px;
+    fill: #222;
+    transform: perspective(800px) rotateY(-15deg);
+    filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.5));
+}
+
+.black-card h3:nth-last-child(2) {
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.black-card p {
+    font-size: 0.95rem;
+    color: #888;
+    line-height: 1.5;
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}

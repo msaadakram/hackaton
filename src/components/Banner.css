@@ -1,0 +1,60 @@
+.banner {
+    background-color: var(--accent-red);
+    color: white;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.banner-content {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.banner-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.fire-emoji {
+    font-size: 1rem;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: blink 1.5s ease-in-out infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.kickstart-badge {
+    background-color: #222;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}

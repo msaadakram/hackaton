@@ -1,0 +1,313 @@
+.hero {
+    padding: 4rem 1rem 4rem 1rem;
+    /* Reduced bottom padding */
+    text-align: center;
+    position: relative;
+    /* Simple grid background effect */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: center top;
+}
+
+/* Blur overlay at bottom if needed, or radial gradient for spotlight */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(227, 58, 58, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-proof {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.avatars {
+    display: flex;
+    margin-right: 0.5rem;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid var(--bg-dark);
+    margin-left: -10px;
+    background-color: #333;
+    /* Placeholder image style */
+    background-size: cover;
+    background-position: center;
+}
+
+.avatar:first-child {
+    margin-left: 0;
+}
+
+.stars {
+    color: #FFD700;
+    /* Gold */
+    font-size: 1.1rem;
+    display: flex;
+    gap: 2px;
+}
+
+.creators-count {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-left: 0.5rem;
+}
+
+.headline {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+}
+
+.headline .highlight-red {
+    color: var(--accent-red);
+    display: block;
+    /* Force new line if needed, or inline */
+}
+
+.subhead {
+    font-size: 1.25rem;
+    color: var(--text-gray);
+    max-width: 600px;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.check-icon {
+    background-color: var(--accent-red);
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    padding-right: 4rem;
+    font-size: 1.1rem;
+    background-color: white;
+    border: none;
+    border-radius: 99px;
+    color: #333;
+    outline: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.search-input::placeholder {
+    color: #999;
+}
+
+.search-btn {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    bottom: 8px;
+    width: 50px;
+    background-color: var(--accent-red);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: background-color 0.2s;
+}
+
+.search-btn:hover {
+    background-color: var(--accent-red-hover);
+}
+
+.chat-bubble {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #111;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.browse-text {
+    margin-top: 1.5rem;
+    color: #666;
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-bottom: 4rem;
+}
+
+.product-showcase-wrapper {
+    width: 98vw;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* Gap between rows */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.product-showcase {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    animation: marquee 50s linear infinite;
+}
+
+.product-showcase.reverse {
+    animation: marquee-reverse 50s linear infinite;
+}
+
+.product-showcase:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 1rem));
+    }
+}
+
+@keyframes marquee-reverse {
+    0% {
+        transform: translateX(calc(-50% - 1rem));
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.product-card {
+    width: 240px;
+    height: 340px;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background-color: #222;
+    /* Fallback */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.product-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 30px 60px rgba(227, 58, 58, 0.2);
+    /* Red glow on hover */
+    z-index: 5;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.card-bg-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .card-bg-image {
+    transform: scale(1.1);
+}
+
+/* Glass overlay for "modern" feel if no image is present, or over image */
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 50%);
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.product-card:hover .card-overlay {
+    opacity: 0.8;
+}
+
+/* Removing old text styles from view, but keeping basic gradient classes for fallback use */
+.card-gradient-1 {
+    background: linear-gradient(135deg, #FF4B6E 0%, #C42645 100%);
+}
+
+.card-gradient-2 {
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+}
+
+.card-gradient-3 {
+    background: linear-gradient(135deg, #D946EF 0%, #A21CAF 100%);
+}
+
+.card-gradient-4 {
+    background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+}
+
+.card-gradient-5 {
+    background: linear-gradient(135deg, #1C1917 0%, #292524 100%);
+}

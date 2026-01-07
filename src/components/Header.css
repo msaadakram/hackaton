@@ -1,0 +1,85 @@
+.header {
+    padding: 1.5rem 0;
+    background-color: transparent;
+    position: relative;
+    z-index: 10;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+}
+
+.logo-icon {
+    background-color: var(--accent-red);
+    color: white;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 900;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-link {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.nav-link-dropdown::after {
+    content: "";
+    /* Simple arrow placeholder if needed, or use SVG in JSX */
+    border: solid currentColor;
+    border-width: 0 1.5px 1.5px 0;
+    display: inline-block;
+    padding: 2px;
+    transform: rotate(45deg);
+    margin-bottom: 2px;
+    margin-left: 2px;
+    opacity: 0.7;
+}
+
+.sign-in-btn {
+    background-color: #1A1A1A;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 99px;
+    /* Pill shape */
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    border: 1px solid #2A2A2A;
+}
+
+.sign-in-btn:hover {
+    background-color: #2A2A2A;
+    border-color: #333;
+}
